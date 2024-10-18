@@ -1,0 +1,30 @@
+ASSIGNMENT NO: 06
+Problem Statement:
+Implement file handling and File input output operations in C++
+Create “BOOK.txt” file.
+ Put some text in the file created above
+Develop an object-oriented program in C++ to writes data to a file, reads it back, and
+displays the content in other file,Write a function in C++ to count the number of
+uppercase alphabets,to count letters present in a file, to count digits present in a file, to
+count white spaces present in a file, to count vowels present in a file using the file
+pointer concept.
+Objectives:
+1. To learn concepts of stream and file.
+2. To learn stream classes
+3. To learn File I/O with Member Functions.
+4. Explain concept file pointer.
+Theory:
+Explain following concepts
+Stream
+Stream classes
+Different functions and modes for file handling
+Algorithm:
+Write algorithm here.
+Platform: 64 –bit Open source Linux
+Input: writing to the file
+Output: reading from the file and displays it.
+Conclusion: Hence, I learned about different types of file handling functions
+FAQs: write answers
+1) What are the types of stream
+2) Draw the Hierarchy of Stream classes
+3) Explain the concept of file pointer
