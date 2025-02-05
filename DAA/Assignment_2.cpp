@@ -81,7 +81,6 @@ class graph {
 			for ( int i = 0; i < n; i++){
 				cout << "Friends of " << head[i]->name << " : ";
 				gNode *temp = head[i]->next;
-
 				while(temp != NULL){
 					cout << temp->name << "-->";
 					temp = temp->next;
@@ -124,12 +123,15 @@ class graph {
 			do{
 				
 				gNode *temp = pop();
+				cout << temp->name << endl;
+				temp = temp->next;
 				while (temp != NULL){
 					int w = temp->id;
 					if (!visited[w]){
-						depthFirstSearch(w);
+						push(temp);
+						visited[temp->id] = true;
 					}
-				temp = temp->next;
+					temp = temp->next;
 				}
 			}while (stackTop != -1);
 
@@ -144,14 +146,17 @@ class graph {
 			do{
 				
 				gNode *temp = dequeue();
+				cout << temp->name << endl;
+				temp = temp->next;
 				while (temp != NULL){
 					int w = temp->id;
 					if (!visited[w]){
-						depthFirstSearch(w);
+						enqueue(temp);
+						visited[temp->id] = true;
 					}
-				temp = temp->next;
+					temp = temp->next;
 				}
-			}while (front != rear);
+			}while (rear != front);
 
 		}
 	
@@ -159,7 +164,10 @@ class graph {
 };
 
 int main(){
-	graph vert(3);
+	int num;
+	cout << "Enter number of users : ";
+	cin >> num;
+	graph vert(num);
 	int ch;
 	int start = -1;
     while(1){

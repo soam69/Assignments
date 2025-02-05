@@ -43,12 +43,11 @@ class graph {
 
         int prims(int startVertex){
             int nearest[cities];
-            bool selected[cities] = {false}; // Track selected vertices
+            bool selected[cities] = {false};
             int min = 999;
             int mincost = 0;
             int index;
 
-            // Initialize nearest[] array
             for (int i = 0; i < cities; i++) {
                 nearest[i] = startVertex;
             }
@@ -63,11 +62,9 @@ class graph {
                     }
                 }
 
-                // Include the edge with the least cost in the MST
                 mincost += min;
                 selected[index] = true;
 
-                // Update nearest[] array
                 for (int k = 0; k < cities; k++) {
                     if (!selected[k] && cost[k][index] < cost[k][nearest[k]]) {
                         nearest[k] = index;
